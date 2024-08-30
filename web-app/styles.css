@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-size: 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-rendering: optimizeLegibility;
 }
@@ -15,6 +14,7 @@ body {
     width: 80%;
     min-height: 100px;
     float: left;
+    margin-top: 20px;
 }
 
 .posts-container {
@@ -27,6 +27,7 @@ body {
     width: 50%;
     min-height: 100px;
     float: left;
+    font-size: 1.1em;
 }
 
 .header {
@@ -36,6 +37,55 @@ body {
 .annotation {
     background-color: yellow;
     padding: 3px;
+}
+
+.tweet {
+    width: calc(100% - 40px);
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 5px lightgrey;
+    background-color: #192841;
+    color: white;
+    font-size: 1em;
+}
+
+.tweet-header {
+    height: fit-content;
+    width: 100%;
+    min-height: 50px;;
+}
+
+.profile-pic {
+    width: 20%;
+    float: left;
+}
+
+.profile-header {
+    width: calc(80% - 20px);
+    height: fit-content;
+    min-height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+.profile-header>p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-nicename {
+    font-size: 16px;
+}
+
+.username {
+    font-size: 12px;
+    color: lightgrey;
 }
 
 .footer {

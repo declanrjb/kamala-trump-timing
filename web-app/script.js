@@ -1,10 +1,12 @@
-$(function() {
-    var searchString = 'judge'
-    var targetElem = $('p')
-
-    var splitParagraph = targetElem.html().split(searchString)
+function highlightText(jqElem,searchString) {
+    var splitParagraph = jqElem.html().split(searchString)
     var newContent = splitParagraph.join('<a class="annotation">' + searchString + '</a>')
-    targetElem.html(newContent)
+    jqElem.html(newContent)
+}
 
+
+$(function() {
+    
+    highlightText($('p')[0],'blorble')
     
 })
