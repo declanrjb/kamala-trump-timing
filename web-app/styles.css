@@ -37,10 +37,11 @@ body {
 .annotation {
     background-color: yellow;
     padding: 3px;
+    transition: background-color .2s;
 }
 
 .tweet {
-    width: calc(100% - 40px);
+    width: calc(20% - 40px);
     border-radius: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -52,6 +53,8 @@ body {
     background-color: #192841;
     color: white;
     font-size: 1em;
+    position: absolute;
+    transition: box-shadow .2s;
 }
 
 .tweet-header {
@@ -65,7 +68,7 @@ body {
     float: left;
 }
 
-.profile-header {
+.user-bio {
     width: calc(80% - 20px);
     height: fit-content;
     min-height: 20px;
@@ -74,7 +77,7 @@ body {
     float: left;
 }
 
-.profile-header>p {
+.user-bio>p {
     margin: 0px;
     padding: 0px;
 }
@@ -86,6 +89,10 @@ body {
 .username {
     font-size: 12px;
     color: lightgrey;
+}
+
+#template-tweet {
+    display: none;
 }
 
 .footer {
