@@ -16,7 +16,7 @@ function createTweet(container,tweetContent,top=0) {
 
 function updateTweet(tweetObj,tweetContent,top=0) {
     tweetObj.children('.tweet-content').html(tweetContent)
-    tweetObj.css('top',top)
+    tweetObj.css('top',top - tweetObj.height()/2)
 }
 
 function tagLine(line,tweet) {
@@ -66,10 +66,14 @@ $.fn.isInViewport = function() {
 function highestVisible(selector) {
     var elems = $(selector)
     var found = null;
+    var middleLine = $(document).scrollTop() + ($(window).height() / 2)
+    var candDistance = 9999999
     elems.each(function() {
         if ($(this).isInViewport()) {
-            if (found == null) {
-                found = this
+            console.log(Math.abs($(this).offset().top - middleLine))
+            if (Math.abs($(this).offset().top - middleLine) < candDistance) {
+                found = $(this)
+                candDistance = Math.abs($(this).offset().top - middleLine)
             }
         }
     })
@@ -95,7 +99,7 @@ $(function() {
                 tagLine(harris_line,data[row]['text_content'])
             }
         })
-
+/*
         $('.annotation').each(function() {
             var currAnnot = $(this)
             var matchedTweet = $('#tweet-' + $(this).attr('id').split('-')[1])
@@ -122,12 +126,24 @@ $(function() {
                 $(this).css('z-index',0)
             })
         })
+*/
 
         var mainTweet = $('#template-tweet')
 
+        var highestAnchor = $(highestVisible('.annotation'))
+        updateTweet(mainTweet,annotsDict[highestAnchor.text()],highestAnchor.position().top + (highestAnchor.height()/2))
+        $('.annotation').each(function() {
+            $(this).removeClass('annotation-active')
+        })
+        highestAnchor.addClass('annotation-active')
+
         $(window).scroll(function() {
             var highestAnchor = $(highestVisible('.annotation'))
-            updateTweet(mainTweet,annotsDict[highestAnchor.text()],highestAnchor.position().top)
+            updateTweet(mainTweet,annotsDict[highestAnchor.text()],highestAnchor.position().top + (highestAnchor.height()/2))
+            $('.annotation').each(function() {
+                $(this).removeClass('annotation-active')
+            })
+            highestAnchor.addClass('annotation-active')
         })
     })
 

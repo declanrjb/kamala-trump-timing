@@ -5,26 +5,26 @@ body {
 }
 
 .gutter {
-    width: 5%;
+    width: 15%;
     float: left;
     min-height: 100px;
 }
 
 .content {
-    width: 90%;
+    width: 70%;
     min-height: 100px;
     float: left;
     margin-top: 20px;
 }
 
 .posts-container {
-    width: 25%;
+    width: 35%;
     min-height: 100px;
     float: left;
 }
 
 .transcript {
-    width: 50%;
+    width: 65%;
     min-height: 100px;
     float: left;
     font-size: 1.1em;
@@ -42,13 +42,22 @@ body {
     /*background-color: yellow;*/
     padding: 3px;
     transition: background-color .2s;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: orangered;
+    text-decoration: none;
+}
+
+.annotation-active {
+    /*background-color: yellow;*/
+    padding: 3px;
+    transition: background-color .2s;
+    background-color: #fce694;
+}
+
+#posts-container-left {
+    display: none;
 }
 
 .tweet {
-    width: calc(22.5% - 20px);
+    width: calc(24.5% - 20px);
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -68,7 +77,7 @@ body {
 .tweet-header {
     height: fit-content;
     width: 100%;
-    min-height: 40px;;
+    min-height: 45px;;
 }
 
 .tweet-content {
@@ -79,6 +88,9 @@ body {
 .profile-pic {
     width: 13%;
     float: left;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 100%;
 }
 
 .user-bio {
@@ -137,8 +149,8 @@ h1 {
 
 .subhead {
     font-family: 'Lora', Georgia, serif;
-    border: 2px solid black;
-    padding: 10px;
+    padding-top: 0px;
+    margin-top: 10px;
 }
 
 iframe,
@@ -171,6 +183,38 @@ code {
 
 .full-width figure {
     text-align: center;
+}
+
+.article-head {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.article-body {
+    width: 100%;
+}
+
+.headline {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.transcript-note {
+    border-left: 5px solid #0beabd;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+a[href] {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #91a6ff;
+    color: black;
+}
+
+a[href]:hover {
+    text-decoration-color: #f9b9f2;
 }
 
 /* margin on mobile */

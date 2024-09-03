@@ -22,6 +22,8 @@ df['minutes_into_speech'] <- (df$seconds_into_speech / 60) %>% as.character() %>
 
 #df['speech_timestamp'] <- df$minutes_into_speech %>% minute_format()
 
-df <- df %>% filter(abs(df$minutes_into_speech) <= 60)
+df <- df %>% 
+  filter(minutes_into_speech > 0) %>% 
+  filter(minutes_into_speech <= 38.5)
 
 write.csv(df,'data/speech_trump-posts.csv',row.names=FALSE)
