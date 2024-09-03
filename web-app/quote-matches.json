@@ -17,7 +17,7 @@
     {
         "created_at": "2024-08-22 21:43:23",
         "content": "<p><\/p>",
-        "media_attachments": "[{'id': '113008797385016441', 'type': 'video', 'url': 'https:\/\/static-assets-1.truthsocial.com\/tmtg:prime-ts-assets\/media_attachments\/files\/113\/008\/797\/385\/016\/441\/original\/f59edd5bf259893b.mp4', 'preview_url': 'https:\/\/static-assets-1.truthsocial.com\/tmtg:prime-ts-assets\/media_attachments\/thumbnails\/113\/008\/797\/385\/016\/441\/original\/fe6e54b811379411.jpg', 'external_video_id': 'v59op3v', 'remote_url': None, 'preview_remote_url': None, 'text_url': None, 'meta': {'colors': {'background': '#040404', 'foreground': '#f8ed62', 'accent': '#faea8c'}, 'original': {'width': 1280, 'height': 720, 'frame_rate': '948250800\/39583333', 'duration': 99.057387, 'bitrate': 612424}, 'small': {'width': 480, 'height': 270, 'size': '480x270', 'aspect': 1.7777777777777777}}, 'description': None, 'blurhash': 'UB6R6[oK9cazs.fQazjt0PWV?Dj@M~azoeaz'}]",
+        "media_attachments": "walz_minnesota_post.jpeg",
         "replies_count": 857,
         "reblogs_count": 3870,
         "favourites_count": 11488,
@@ -145,7 +145,7 @@
         "minutes_into_speech": 6.113150001,
         "speech_timestamp": "6:7",
         "seconds_into_speech": 366.789,
-        "text_content": "RT: https:\/\/truthsocial.com\/users\/realDonaldTrump\/statuses\/113008797496379775She\u2019s talking about how great San Francisco was before she destroyed it, probably not a good idea!",
+        "text_content": "She's talking about how great San Francisco was before she destroyed it, probably not a good idea!",
         "seconds_shifted": 306.789,
         "harris line match": "Mrs. Shelton, who ran the day care below us and became a second mother. Uncle Sherman, Aunt Mary, Uncle Freddie, Auntie Chris — none of them family by blood, and all of them family by love."
     },

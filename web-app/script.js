@@ -19,6 +19,10 @@ function updateTweet(tweetObj,tweetContent,top=0) {
     tweetObj.css('top',top - tweetObj.height()/2)
 }
 
+function updateTweetImage(tweetObj,imagePath) {
+    tweetObj.children('.tweet-image').css('display','block').attr('src',imagePath)
+}
+
 function tagLine(line,tweet) {
     $('.speech-para').each(function() {
         if ($(this).html().replace(/\s+/g,' ').trim().includes(line)) {
@@ -139,7 +143,21 @@ $(function() {
 
         $(window).scroll(function() {
             var highestAnchor = $(highestVisible('.annotation'))
-            updateTweet(mainTweet,annotsDict[highestAnchor.text()],highestAnchor.position().top + (highestAnchor.height()/2))
+            var anchorText = highestAnchor.text()
+            if (anchorText == "Just imagine Donald Trump with no guardrails,") {
+                updateTweetImage(mainTweet,'walz_minnesota_post.jpeg')
+            } else {
+                mainTweet.children('.tweet-image').css('display','none')
+            }
+            updateTweet(mainTweet,annotsDict[anchorText],highestAnchor.position().top + (highestAnchor.height()/2))
+
+            if (anchorText == 'The scale of suffering is heartbreaking.') {
+                mainTweet.children('.tweet-video').css('display','block')
+            } else {
+                mainTweet.children('.tweet-video').css('display','none')
+            }
+
+
             $('.annotation').each(function() {
                 $(this).removeClass('annotation-active')
             })

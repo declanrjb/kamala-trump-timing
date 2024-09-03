@@ -217,6 +217,10 @@ a[href]:hover {
     text-decoration-color: #f9b9f2;
 }
 
+.tweet-video {
+    display: none;
+}
+
 /* margin on mobile */
 @media (max-width: 640px) {
     body {
