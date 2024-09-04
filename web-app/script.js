@@ -71,7 +71,7 @@ $(function() {
 
     var mobileMode = $(window).width() < 840;
 
-    $.getJSON('quote-matches.json',function(data) {
+    $.getJSON('web-app/quote-matches.json',function(data) {
         var annotsDict = {}
         $(data).each(function(row) {
             var harris_line = data[row]['harris line match']
@@ -109,7 +109,7 @@ $(function() {
 
                 var anchorText = highestAnchor.text()
                 if (anchorText == "Just imagine Donald Trump with no guardrails,") {
-                    updateTweetImage(mainTweet,'walz_minnesota_post.jpeg')
+                    updateTweetImage(mainTweet,'web-app/walz_minnesota_post.jpeg')
                 } else {
                     mainTweet.children('.tweet-image').css('display','none')
                 }
