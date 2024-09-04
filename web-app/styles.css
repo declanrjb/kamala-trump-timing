@@ -222,7 +222,7 @@ a[href]:hover {
 }
 
 /* margin on mobile */
-@media (max-width: 640px) {
+@media (max-width: 840px) {
     body {
         font-size: 18px;
     }
@@ -230,5 +230,44 @@ a[href]:hover {
     .content {
         padding-left: 0.5em;
         padding-right: 0.5em;
+    }
+
+    .transcript {
+        width: 100%;
+    }
+
+    .posts-container {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        height: 100%;
+    }
+
+    .content {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .gutter {
+        display: none;
+    }
+
+    .tweet {
+        width: calc(100% - 40px);
+        margin: 20px;
+        bottom: -200px;
+        position: fixed;
+        transition: bottom 1s;
+    }
+
+    .annotation {
+        padding: 3px;
+        transition: background-color .2s;
+        background-color: #fce694;
+    }
+
+    .tweet-content {
+        font-size: 1em;
     }
 }
