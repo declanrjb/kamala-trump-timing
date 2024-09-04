@@ -1,0 +1,8 @@
+Interactive visualization of Former President Trump's Truth Social posts during Vice President Kamala Harris's nomination
+acceptance address to the Democratic National Convention (DNC), aligned by timestamp.
+
+Time stamps for Former President Trump's statements were taken from his Truth Social platform, with precision to the nearest second, and converted to Eastern Standard Time (EST). Review of a recorded live CNN broadcast indicated that VP Harris began speaking at 10:33:36 (EST), with the time to the minute displayed by the broadcaster itself and second precision timed manually by a reporter with a stopwatch.
+
+A freely available YouTube recording of the address was downloaded with yt-dlp and transcribed using vibe, yielding a JSON file of microsecond precision timestamps for each rough sentence. The transcripts were aligned against VP Harris's phrase "thank you, thank you, please, thank you."
+
+Further calculations and data analysis were performed in R. Time stamps for Former President Trump's posts were then placed into transcript time by calculating the difference between their time in EST and the moment of the transcript's first line (10:33:36). Manual review of clear direct response posts ("chaos and calamity", etc) suggested that the typical typing time for a post was approximately 60 seconds, and this offset was subtracted from each post's transcript time. Manual review also matched posts to timestamped lines of the transcript and corrected for transcription errors, and the full transcript was checked against the New York Times' version.

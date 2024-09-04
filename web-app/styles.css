@@ -221,15 +221,26 @@ a[href]:hover {
     display: none;
 }
 
+.methodology {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.methodology>h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.tool {
+    font-weight: bold;
+    color: orangered;
+}
+
 /* margin on mobile */
 @media (max-width: 840px) {
     body {
-        font-size: 18px;
-    }
-
-    .content {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        font-size: 16px;
     }
 
     .transcript {

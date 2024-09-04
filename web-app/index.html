@@ -206,6 +206,11 @@
                 <p class="speech-para">But tonight, in America, too many women are not able to make those decisions. And let’s be clear
                     about how we got here: Donald Trump handpicked members of the U.S. Supreme Court to take away reproductive freedom.
                     And now, he brags about it.</p>
+                <p class="transcript-note">Since the Supreme Court's June 2022 decision to overturn Roe v. Wade, abortion rights
+                    have become a critical issue on the campaign trail, with VP Harris seeking to draw a clear contrast between her
+                    own support for pro-Choice policies and former President Trump's influence in staffing a conservative court. The issue
+                    is <a href="https://www.npr.org/2024/09/01/nx-s1-5094484/the-election-likely-depends-by-a-narrow-slice-of-the-electorate-undecided-voters">closely watched by undecided voters</a>.
+                </p>
                 <p class="speech-para">In his words, “I did it, and I’m proud to have done it.”</p>
                 <p class="speech-para">Well, I will tell you, over the past two years, I’ve traveled across our country, and women have
                     told me their stories. Husbands and fathers have shared theirs. Stories of women miscarrying in a parking lot,
@@ -291,6 +296,23 @@
                     let’s fight for it. Let’s get out there, let’s vote for it, and together, let us write the next great chapter in the
                     most extraordinary story ever told.</p>
                 <p class="speech-para">Thank you. God bless you, and may God bless the United States of America. Thank you.</p>
+                <div class="methodology">
+                    <h2>Methodology <i class="fa-brands fa-github"></i></h2>
+                    <p>Time stamps for Former President Trump's statements were taken from his Truth Social platform, with precision
+                        to the nearest second, and converted to Eastern Standard Time (EST). Review of a recorded live CNN broadcast 
+                        indicated that VP Harris began speaking at 10:33:36 (EST), with the time to the minute displayed by the broadcaster
+                        itself and second precision timed manually by a reporter with a stopwatch.
+                    </p>
+                    <p>A freely available YouTube recording of the address was downloaded with <a class="tool">yt-dlp</a> and transcribed using <a class="tool">vibe</a>,
+                    yielding a JSON file of microsecond precision timestamps for each rough sentence. The transcripts were aligned against
+                    VP Harris's phrase "thank you, thank you, please, thank you."</p> 
+                    <p>Further calculations and data analysis were performed in <a class="tool">R</a>. Time stamps for Former President Trump's
+                    posts were then placed into transcript time by calculating the difference between their time in EST and the moment of
+                    the transcript's first line (10:33:36). Manual review of clear direct response posts ("chaos and calamity", etc) suggested 
+                    that the typical typing time for a post was approximately 60 seconds, and this offset was subtracted from each post's transcript
+                    time. Manual review also matched posts to timestamped lines of the transcript and corrected for transcription errors, and the full
+                    transcript was checked against the <a href="https://www.nytimes.com/2024/08/23/us/politics/kamala-harris-speech-transcript.html">New York Times' version</a>.</p>
+                </div>
             </div>
         </div>
     </div>
